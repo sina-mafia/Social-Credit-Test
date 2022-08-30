@@ -18,7 +18,8 @@ pygame.mixer.Sound.play(background_music)
 username = socket.gethostname()
 score = 0            
 words = "Hello it's me, John Xina. It seems like you have very low social credit points And I'm afraid that We will have to execute you."
-words2 = "Hello. I see that you passed, {}! This impressive score shall be set an example for all citizens of the China. Our glorious leader Xi Jinping is impressed with you score. Good work comrade!".format(username)
+words2 = """Hello. I see that you passed, {}! This impressive score shall be set an example for all citizens of the China.
+Our glorious leader Xi Jinping is impressed with you score. Good work comrade!""".format(username)
 
 def john_xina_talking():
     for char in words:
@@ -38,6 +39,7 @@ def check():
                 pygame.mixer.Sound.stop(correct_answer)
                 pygame.mixer.Sound.stop(wrong_answer)
                 pygame.mixer.Sound.stop(background_music)
+                time.sleep(5)
                 pygame.mixer.Sound.play(john_xina_calling)
                 os.system('cls||clear')
                 print("John Xina started a call")
@@ -57,6 +59,7 @@ def check():
                 pygame.mixer.Sound.stop(correct_answer)
                 pygame.mixer.Sound.stop(wrong_answer)
                 pygame.mixer.Sound.stop(background_music)
+                time.sleep(5)
                 pygame.mixer.Sound.play(john_xina_calling)
                 os.system('cls||clear')
                 print("John Xina started a call")
@@ -66,6 +69,7 @@ def check():
                 pygame.mixer.Sound.play(john_xina_joined)
                 john_xina_talking2()
                 pygame.mixer.Sound.play(john_xina_leave)
+                exit()
         
                    
 def next():
@@ -157,7 +161,6 @@ def next():
             score -= 1
             
         check()
-        exit()
         
                 
             
