@@ -19,7 +19,7 @@ username = socket.gethostname()
 score = 0            
 words = "Hello it's me, John Xina. It seems like you have very low social credit points And I'm afraid that We will have to execute you."
 words2 = """Hello. I see that you passed, {}! This impressive score shall be set an example for all citizens of the China.
-Our glorious leader Xi Jinping is impressed with you score. Good work comrade!""".format(username)
+Our glorious leader Xi Jinping is impressed with your score. Good work comrade!""".format(username)
 
 def john_xina_talking():
     for char in words:
@@ -29,7 +29,7 @@ def john_xina_talking():
 
 def john_xina_talking2():
     for char in words2:
-        time.sleep(0.1)
+        time.sleep(0.15)
         sys.stdout.write(char)
         sys.stdout.flush()
 
@@ -51,8 +51,9 @@ def check():
                 print("\n")
                 print("\n")
                 print("""Your Execution date is TOMORROW. Glory to the CCP!\n""")
+                time.sleep(1)
                 print("您的执行日期是明天. 荣耀归于中共!")
-                exit()
+                time.sleep(1)
     elif score == 3:
                 window.destroy()
                 pygame.mixer.Sound.stop(correct_answer)
@@ -61,14 +62,13 @@ def check():
                 pygame.mixer.Sound.play(john_xina_calling)
                 os.system('cls||clear')
                 print("John Xina started a call")
-            
+
                 time.sleep(5)
                 print("<John Xina>: ")
                 pygame.mixer.Sound.play(john_xina_joined)
                 john_xina_talking2()
                 pygame.mixer.Sound.play(john_xina_leave)
-                exit()
-        
+                print("\n")
                    
 def next():
     global label2
@@ -159,6 +159,7 @@ def next():
             score -= 1
             
         check()
+        exit()
         
                 
             
