@@ -62,6 +62,7 @@ def check():
                 os.system('cls||clear')
                 print("John Xina started a call")
             
+                time.sleep(5)
                 print("<John Xina>: ")
                 pygame.mixer.Sound.play(john_xina_joined)
                 john_xina_talking2()
